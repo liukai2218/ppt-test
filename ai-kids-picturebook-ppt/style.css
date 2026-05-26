@@ -1,228 +1,193 @@
-.tpl-ai-kids {
-  --bg: #fff5dc;
+.tpl-word-preview {
+  --bg: #fff4d7;
   --surface: #fffdf5;
-  --surface-2: #eaffdc;
-  --border: rgba(82, 54, 29, .22);
-  --border-strong: rgba(82, 54, 29, .46);
-  --text-1: #382315;
-  --text-2: #70543b;
-  --text-3: #9d7e61;
-  --accent: #32b889;
-  --accent-2: #ff815f;
-  --accent-3: #6d8eff;
-  --warn: #ffd45d;
-  --shadow: 0 12px 0 rgba(82, 54, 29, .10), 0 20px 36px rgba(82, 54, 29, .08);
-  --font-display: 'Noto Sans SC', 'Inter', sans-serif;
+  --paper: #ffffff;
+  --ink: #312318;
+  --muted: #725844;
+  --line: rgba(78, 50, 28, .28);
+  --line-strong: #4e321c;
+  --brand: #e82431;
+  --orange: #ff8a3d;
+  --yellow: #ffd966;
+  --mint: #8ee1c8;
+  --blue: #8bc8ff;
+  --pink: #ffb6c8;
+  --green: #b8ef89;
+  --shadow: 0 10px 0 rgba(78, 50, 28, .12), 0 22px 42px rgba(78, 50, 28, .12);
+  --font-display: "Noto Sans SC", "Microsoft YaHei", sans-serif;
   letter-spacing: 0;
 }
 
-.tpl-ai-kids .deck {
+.tpl-word-preview .deck {
   background:
-    radial-gradient(circle at 12% 16%, rgba(255, 212, 93, .42), transparent 24%),
-    radial-gradient(circle at 84% 22%, rgba(109, 142, 255, .20), transparent 24%),
-    radial-gradient(circle at 78% 84%, rgba(255, 129, 95, .22), transparent 28%),
-    #fff5dc;
-}
-
-.tpl-ai-kids .slide {
-  padding: 58px 70px;
-  background:
-    linear-gradient(0deg, rgba(255, 255, 255, .30), rgba(255, 255, 255, .30)),
-    repeating-radial-gradient(circle at 0 0, rgba(82, 54, 29, .045) 0 3px, transparent 4px 42px),
+    radial-gradient(circle at 10% 12%, rgba(255, 217, 102, .50), transparent 24%),
+    radial-gradient(circle at 82% 14%, rgba(139, 200, 255, .32), transparent 24%),
+    radial-gradient(circle at 78% 82%, rgba(255, 138, 61, .24), transparent 28%),
     var(--bg);
 }
 
-.tpl-ai-kids .slide::before {
+.tpl-word-preview .slide {
+  padding: 58px 70px;
+  background:
+    linear-gradient(0deg, rgba(255, 255, 255, .34), rgba(255, 255, 255, .34)),
+    repeating-radial-gradient(circle at 0 0, rgba(78, 50, 28, .045) 0 3px, transparent 4px 42px),
+    var(--bg);
+}
+
+.tpl-word-preview .slide::before {
   content: "";
   position: absolute;
   inset: 18px;
-  border: 4px dashed rgba(82, 54, 29, .16);
+  border: 4px dashed rgba(78, 50, 28, .16);
   border-radius: 34px;
   pointer-events: none;
 }
 
-.tpl-ai-kids .slide::after {
-  content: "★ ● ▲ ★";
+.tpl-word-preview .slide::after {
+  content: "";
   position: absolute;
   right: 42px;
   bottom: 28px;
-  color: rgba(255, 129, 95, .50);
-  font-size: 24px;
-  font-weight: 900;
-  letter-spacing: 12px;
-  transform: rotate(-5deg);
+  width: 116px;
+  height: 24px;
+  background:
+    radial-gradient(circle, rgba(232, 36, 49, .45) 0 5px, transparent 6px),
+    radial-gradient(circle, rgba(255, 138, 61, .50) 0 5px, transparent 6px),
+    radial-gradient(circle, rgba(49, 35, 24, .30) 0 5px, transparent 6px);
+  background-position: 0 50%, 42px 50%, 84px 50%;
+  background-repeat: no-repeat;
   pointer-events: none;
 }
 
-.tpl-ai-kids .brand-mark {
+.tpl-word-preview .brand-mark {
   position: fixed;
-  top: 30px;
-  right: 44px;
+  top: 26px;
+  right: 42px;
   z-index: 60;
   display: flex;
   align-items: center;
   gap: 10px;
-  min-width: 218px;
+  min-width: 208px;
   height: 58px;
   padding: 7px 14px 7px 8px;
-  border: 3px solid rgba(234, 37, 48, .26);
+  border: 3px solid rgba(232, 36, 49, .25);
   border-radius: 999px;
-  background: rgba(255, 253, 245, .92);
-  box-shadow: 0 6px 0 rgba(82, 54, 29, .08), 0 14px 30px rgba(234, 37, 48, .08);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 253, 245, .94);
+  box-shadow: 0 6px 0 rgba(78, 50, 28, .08), 0 14px 30px rgba(232, 36, 49, .08);
   pointer-events: none;
 }
 
-.tpl-ai-kids:has(.cover-slide.is-active) .brand-mark,
-.tpl-ai-kids:has(.goodbye-slide.is-active) .brand-mark {
-  opacity: 0;
-}
-
-.tpl-ai-kids .brand-symbol {
-  width: 42px;
-  height: 42px;
-  flex: none;
-  border: 2px solid rgba(234, 37, 48, .24);
+.tpl-word-preview .brand-mark img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
   border-radius: 50%;
-  background-color: #fff;
-  background-image: url("assets/brand/hissen-music-logo.jpg");
-  background-repeat: no-repeat;
-  background-size: 118px auto;
-  background-position: 50% 31%;
-  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .84);
+  background: #fff;
+  border: 2px solid rgba(232, 36, 49, .18);
 }
 
-.tpl-ai-kids .brand-copy {
+.tpl-word-preview .brand-mark span {
   display: grid;
-  gap: 1px;
+  gap: 2px;
   line-height: 1.05;
 }
 
-.tpl-ai-kids .brand-copy strong {
-  color: #e82431;
+.tpl-word-preview .brand-mark strong {
+  color: var(--brand);
   font-size: 16px;
   font-weight: 900;
-  letter-spacing: 0;
 }
 
-.tpl-ai-kids .brand-copy em {
-  color: #3c3029;
+.tpl-word-preview .brand-mark em {
+  color: #30251f;
   font-size: 10px;
   font-style: normal;
   font-weight: 900;
-  letter-spacing: .20em;
+  letter-spacing: .18em;
 }
 
-.tpl-ai-kids .cover-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: 28px;
-  padding: 10px 18px 10px 10px;
-  border: 4px solid rgba(234, 37, 48, .24);
-  border-radius: 999px;
-  background: rgba(255, 253, 245, .92);
-  box-shadow: 0 8px 0 rgba(82, 54, 29, .08), 0 18px 34px rgba(234, 37, 48, .08);
+.tpl-word-preview:has(.cover-slide.is-active) .brand-mark,
+.tpl-word-preview:has(.goodbye-slide.is-active) .brand-mark {
+  opacity: 0;
 }
 
-.tpl-ai-kids .brand-symbol-cover {
-  width: 58px;
-  height: 58px;
-  background-size: 162px auto;
-}
-
-.tpl-ai-kids .brand-copy-cover strong {
-  font-size: 22px;
-}
-
-.tpl-ai-kids .brand-copy-cover em {
-  font-size: 13px;
-}
-
-.tpl-ai-kids .task-slide .slide-title::after,
-.tpl-ai-kids .slide[data-title="技能介绍"] .slide-title::after,
-.tpl-ai-kids .homework-slide .slide-title::after,
-.tpl-ai-kids .summary-slide .slide-title::after {
-  content: "";
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  margin-left: 12px;
-  border: 2px solid rgba(234, 37, 48, .26);
-  border-radius: 50%;
-  background-color: #fffdf5;
-  background-image: url("assets/brand/hissen-music-logo.jpg");
-  background-repeat: no-repeat;
-  background-size: 96px auto;
-  background-position: 50% 31%;
-  box-shadow: 0 4px 0 rgba(82, 54, 29, .08);
-  vertical-align: .08em;
-}
-
-.tpl-ai-kids .page-chip,
-.tpl-ai-kids .lesson-badge {
+.tpl-word-preview .lesson-badge,
+.tpl-word-preview .page-chip {
   position: absolute;
   top: 30px;
   left: 44px;
-  z-index: 3;
+  z-index: 4;
   padding: 8px 16px;
-  border: 3px solid var(--border-strong);
+  border: 3px solid var(--line-strong);
   border-radius: 999px;
   background: #fffdf5;
-  color: var(--text-2);
+  color: var(--muted);
   font-size: 15px;
   font-weight: 900;
-  box-shadow: 0 6px 0 rgba(82, 54, 29, .10);
+  box-shadow: 0 6px 0 rgba(78, 50, 28, .10);
   transform: rotate(-2deg);
 }
 
-.tpl-ai-kids .kicker {
-  margin: 0;
-  color: var(--accent-2);
-  font-size: 18px;
-  font-weight: 900;
+.tpl-word-preview h1,
+.tpl-word-preview h2,
+.tpl-word-preview h3,
+.tpl-word-preview p {
+  letter-spacing: 0;
 }
 
-.tpl-ai-kids .hero-title {
-  margin: 10px 0 18px;
-  color: var(--text-1);
-  font-size: 86px;
-  line-height: 1.02;
+.tpl-word-preview .slide-title {
+  position: relative;
+  z-index: 2;
+  max-width: 1020px;
+  margin: 0 0 22px;
+  color: var(--ink);
+  font-size: 54px;
+  line-height: 1.08;
   font-weight: 900;
-  text-shadow: 0 7px 0 rgba(255, 212, 93, .38);
+  text-shadow: 0 5px 0 rgba(255, 217, 102, .34);
 }
 
-.tpl-ai-kids .hero-sub,
-.tpl-ai-kids .subtitle {
-  margin: 0;
-  color: var(--text-2);
-  font-size: 26px;
+.tpl-word-preview .subtitle {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 25px;
   line-height: 1.45;
   font-weight: 800;
 }
 
-.tpl-ai-kids .slide-title {
-  position: relative;
-  z-index: 2;
-  margin: 0 0 22px;
-  max-width: 1040px;
-  color: var(--text-1);
-  font-size: 56px;
-  line-height: 1.1;
-  font-weight: 900;
-  text-shadow: 0 5px 0 rgba(255, 212, 93, .28);
-}
-
-.tpl-ai-kids .top-center {
+.tpl-word-preview .top-center {
   max-width: none;
   text-align: center;
 }
 
-.tpl-ai-kids .cover-grid,
-.tpl-ai-kids .story-layout,
-.tpl-ai-kids .demo-layout,
-.tpl-ai-kids .build-layout,
-.tpl-ai-kids .skills-explain {
+.tpl-word-preview .kicker {
+  margin: 0 0 10px;
+  color: var(--brand);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.tpl-word-preview .cover-slide {
+  overflow: hidden;
+}
+
+.tpl-word-preview .cover-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(110deg, rgba(255, 253, 245, .92) 0 52%, rgba(255, 217, 102, .42) 52% 100%),
+    var(--bg);
+}
+
+.tpl-word-preview .cover-layout,
+.tpl-word-preview .story-layout,
+.tpl-word-preview .method-layout,
+.tpl-word-preview .build-layout,
+.tpl-word-preview .test-layout,
+.tpl-word-preview .agent-layout {
   position: relative;
   z-index: 2;
   display: grid;
@@ -233,651 +198,685 @@
   height: 100%;
 }
 
-.tpl-ai-kids .tag-row {
+.tpl-word-preview .cover-copy h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: 94px;
+  line-height: .98;
+  font-weight: 900;
+  text-shadow: 0 8px 0 rgba(255, 217, 102, .42);
+}
+
+.tpl-word-preview .hero-sub {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 28px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.tpl-word-preview .tag-row {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 30px;
 }
 
-.tpl-ai-kids .tag-row span {
-  padding: 12px 18px;
-  border: 4px solid var(--border-strong);
+.tpl-word-preview .tag-row span,
+.tpl-word-preview .method-bubbles span,
+.tpl-word-preview .mini-tags span {
+  padding: 11px 17px;
+  border: 4px solid var(--line-strong);
   border-radius: 999px;
   background: #fff0a8;
-  color: var(--text-1);
-  font-size: 22px;
+  color: var(--ink);
+  font-size: 21px;
   font-weight: 900;
-  box-shadow: 0 7px 0 rgba(82, 54, 29, .10);
+  box-shadow: 0 7px 0 rgba(78, 50, 28, .10);
 }
 
-.tpl-ai-kids .tag-row span:nth-child(2) { background: #c9f4ff; transform: rotate(3deg); }
-.tpl-ai-kids .tag-row span:nth-child(3) { background: #ffd4c8; transform: rotate(-2deg); }
+.tpl-word-preview .tag-row span:nth-child(2),
+.tpl-word-preview .method-bubbles span:nth-child(2n) {
+  background: #c9f4ff;
+}
 
-.tpl-ai-kids .decoder-hero,
-.tpl-ai-kids .story-board,
-.tpl-ai-kids .mission-card,
-.tpl-ai-kids .plain-card,
-.tpl-ai-kids .skill-machine,
-.tpl-ai-kids .goodbye-card {
+.tpl-word-preview .tag-row span:nth-child(3),
+.tpl-word-preview .method-bubbles span:nth-child(3n) {
+  background: #ffd4c8;
+}
+
+.tpl-word-preview .cover-visual {
   position: relative;
-  border: 5px solid var(--border-strong);
-  border-radius: 38px;
+  min-height: 500px;
+}
+
+.tpl-word-preview .notebook,
+.tpl-word-preview .mistake-board,
+.tpl-word-preview .insight-card,
+.tpl-word-preview .mission-card,
+.tpl-word-preview .rule-card,
+.tpl-word-preview .sample-card,
+.tpl-word-preview .agent-card,
+.tpl-word-preview .goodbye-card {
+  position: relative;
+  border: 5px solid var(--line-strong);
+  border-radius: 34px;
   background: var(--surface);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
-.tpl-ai-kids .decoder-hero {
-  min-height: 440px;
-  background: linear-gradient(#c9f4ff 0 56%, #eaffdc 56% 100%);
-}
-
-.tpl-ai-kids .paper-card {
+.tpl-word-preview .notebook {
   position: absolute;
-  width: 220px;
-  height: 260px;
-  border: 5px solid #52361d;
-  border-radius: 24px;
-  background: #fffdf5;
+  left: 20px;
+  top: 42px;
+  width: 390px;
+  height: 330px;
+  padding: 42px;
+  transform: rotate(-5deg);
 }
 
-.tpl-ai-kids .paper-a { left: 70px; top: 70px; transform: rotate(-8deg); }
-.tpl-ai-kids .paper-b { right: 70px; top: 96px; transform: rotate(7deg); }
-
-.tpl-ai-kids .paper-card::before,
-.tpl-ai-kids .paper-card::after {
+.tpl-word-preview .notebook::before {
   content: "";
   position: absolute;
-  left: 26px;
-  right: 26px;
-  height: 12px;
-  border-radius: 999px;
-  background: #ffd45d;
+  inset: 0;
+  background: repeating-linear-gradient(#fffdf5 0 46px, rgba(139, 200, 255, .38) 47px 50px);
 }
 
-.tpl-ai-kids .paper-card::before { top: 54px; }
-.tpl-ai-kids .paper-card::after { top: 94px; background: #8ee1c8; }
-
-.tpl-ai-kids .lens-big {
-  position: absolute;
-  left: 50%;
-  top: 48%;
-  width: 170px;
-  height: 170px;
-  border: 14px solid #52361d;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, .42);
-  transform: translate(-50%, -50%);
-}
-
-.tpl-ai-kids .lens-big::after {
-  content: "";
-  position: absolute;
-  right: -76px;
-  bottom: -30px;
-  width: 106px;
-  height: 24px;
-  border: 6px solid #52361d;
-  border-radius: 999px;
-  background: #ff815f;
-  transform: rotate(42deg);
-}
-
-.tpl-ai-kids .decoder-panel {
-  position: absolute;
-  left: 48px;
-  right: 48px;
-  bottom: 34px;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-}
-
-.tpl-ai-kids .decoder-panel span {
-  padding: 10px 16px;
-  border: 3px solid #52361d;
-  border-radius: 999px;
-  background: #fff0a8;
-  font-size: 18px;
+.tpl-word-preview .notebook span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-bottom: 28px;
+  color: var(--ink);
+  font-size: 42px;
   font-weight: 900;
 }
 
-.tpl-ai-kids .step-cards,
-.tpl-ai-kids .problem-grid,
-.tpl-ai-kids .module-map,
-.tpl-ai-kids .skill-grid,
-.tpl-ai-kids .vote-grid,
-.tpl-ai-kids .showcase-grid,
-.tpl-ai-kids .test-list,
-.tpl-ai-kids .challenge-grid,
-.tpl-ai-kids .summary-cards,
-.tpl-ai-kids .homework-list {
+.tpl-word-preview .scan-card {
+  position: absolute;
+  right: 20px;
+  top: 84px;
+  width: 190px;
+  height: 190px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  border: 5px solid var(--line-strong);
+  border-radius: 50%;
+  background: #c9f4ff;
+  box-shadow: var(--shadow);
+}
+
+.tpl-word-preview .scan-card b {
+  color: var(--brand);
+  font-size: 54px;
+  font-weight: 900;
+}
+
+.tpl-word-preview .scan-card p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.18;
+  text-align: center;
+  font-weight: 900;
+}
+
+.tpl-word-preview .brand-cover {
+  position: absolute;
+  left: 50px;
+  right: 40px;
+  bottom: 4px;
+  display: grid;
+  place-items: center;
+  padding: 10px 28px;
+  border: 4px solid rgba(232, 36, 49, .24);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 8px 0 rgba(78, 50, 28, .08);
+}
+
+.tpl-word-preview .brand-cover img,
+.tpl-word-preview .goodbye-logo {
+  display: block;
+  max-width: 100%;
+  height: 92px;
+  object-fit: contain;
+}
+
+.tpl-word-preview .step-cards,
+.tpl-word-preview .problem-grid,
+.tpl-word-preview .skill-grid,
+.tpl-word-preview .demo-flow,
+.tpl-word-preview .vote-grid,
+.tpl-word-preview .showcase-grid,
+.tpl-word-preview .upgrade-map,
+.tpl-word-preview .challenge-grid,
+.tpl-word-preview .summary-cards,
+.tpl-word-preview .homework-list,
+.tpl-word-preview .test-list,
+.tpl-word-preview .mission-list,
+.tpl-word-preview .build-checks {
   position: relative;
   z-index: 2;
   display: grid;
-  gap: 20px;
+  gap: 18px;
 }
 
-.tpl-ai-kids .three,
-.tpl-ai-kids .vote-grid,
-.tpl-ai-kids .challenge-grid,
-.tpl-ai-kids .homework-list {
+.tpl-word-preview .three,
+.tpl-word-preview .vote-grid,
+.tpl-word-preview .homework-list {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.tpl-ai-kids .step-card,
-.tpl-ai-kids .problem-grid div,
-.tpl-ai-kids .module-map div,
-.tpl-ai-kids .skill-card,
-.tpl-ai-kids .vote-card,
-.tpl-ai-kids .rule-card,
-.tpl-ai-kids .build-checks span,
-.tpl-ai-kids .showcase-grid div,
-.tpl-ai-kids .test-list div,
-.tpl-ai-kids .challenge-grid div,
-.tpl-ai-kids .summary-cards div,
-.tpl-ai-kids .homework-list div {
-  border: 4px solid var(--border-strong);
-  border-radius: 28px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  color: var(--text-1);
+.tpl-word-preview .problem-grid,
+.tpl-word-preview .showcase-grid,
+.tpl-word-preview .upgrade-map,
+.tpl-word-preview .summary-cards,
+.tpl-word-preview .build-checks {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.tpl-ai-kids .step-card {
-  min-height: 260px;
-  padding: 28px;
+.tpl-word-preview .skill-grid,
+.tpl-word-preview .challenge-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.tpl-ai-kids .step-card b,
-.tpl-ai-kids .module-map b,
-.tpl-ai-kids .skill-card span,
-.tpl-ai-kids .vote-card b,
-.tpl-ai-kids .summary-cards b {
-  display: grid;
-  width: 54px;
-  height: 54px;
-  place-items: center;
-  border: 4px solid #52361d;
-  border-radius: 50%;
-  background: #fffdf5;
-  font-size: 25px;
-  font-weight: 900;
-}
-
-.tpl-ai-kids h3 {
-  margin: 14px 0 8px;
-  color: var(--text-1);
-  font-size: 28px;
-  line-height: 1.18;
-  font-weight: 900;
-}
-
-.tpl-ai-kids p,
-.tpl-ai-kids li,
-.tpl-ai-kids small {
-  color: var(--text-2);
-  font-size: 21px;
-  line-height: 1.42;
-  font-weight: 750;
-}
-
-.tpl-ai-kids .yellow { background: #fff0a8; }
-.tpl-ai-kids .blue { background: #c9f4ff; }
-.tpl-ai-kids .pink { background: #ffd4c8; }
-
-.tpl-ai-kids .story-board {
-  min-height: 420px;
-  background: #fffdf5;
-}
-
-.tpl-ai-kids .student-face {
-  position: absolute;
-  left: 52px;
-  top: 70px;
-  width: 132px;
-  height: 132px;
-  border: 6px solid #52361d;
-  border-radius: 50%;
-  background: #ffd9bb;
-}
-
-.tpl-ai-kids .student-face::before,
-.tpl-ai-kids .student-face::after {
-  content: "";
-  position: absolute;
-  top: 52px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #382315;
-}
-
-.tpl-ai-kids .student-face::before { left: 38px; }
-.tpl-ai-kids .student-face::after { right: 38px; }
-
-.tpl-ai-kids .long-paper {
-  position: absolute;
-  right: 58px;
-  top: 58px;
-  width: 270px;
-  height: 310px;
-  padding: 46px 32px;
-  border: 5px solid #52361d;
-  border-radius: 28px;
-  background: #fffaf0;
-  transform: rotate(4deg);
-}
-
-.tpl-ai-kids .long-paper span {
-  display: block;
-  height: 13px;
-  margin-bottom: 22px;
-  border-radius: 999px;
-  background: #c9f4ff;
-}
-
-.tpl-ai-kids .long-paper span:nth-child(2n) { background: #ffd4c8; }
-
-.tpl-ai-kids .question-mark {
-  position: absolute;
-  left: 146px;
-  bottom: 56px;
-  color: #ff815f;
-  font-size: 138px;
-  line-height: 1;
-  font-weight: 900;
-}
-
-.tpl-ai-kids .quote-box,
-.tpl-ai-kids .teacher-prompt,
-.tpl-ai-kids .big-quote {
-  position: relative;
-  z-index: 2;
-  margin-top: 28px;
-  padding: 20px 26px;
-  border: 4px solid rgba(255, 129, 95, .55);
-  border-radius: 26px;
-  background: #fff0c7;
-  color: var(--text-1);
-  font-size: 25px;
-  line-height: 1.36;
-  font-weight: 900;
-  box-shadow: 0 8px 0 rgba(82, 54, 29, .08);
-}
-
-.tpl-ai-kids .problem-grid {
+.tpl-word-preview .demo-flow {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.tpl-ai-kids .problem-grid div {
-  min-height: 210px;
-  padding: 24px;
+.tpl-word-preview .step-cards > div,
+.tpl-word-preview .problem-grid > div,
+.tpl-word-preview .skill-card,
+.tpl-word-preview .demo-flow > div,
+.tpl-word-preview .vote-grid > div,
+.tpl-word-preview .showcase-grid > div,
+.tpl-word-preview .upgrade-map > div,
+.tpl-word-preview .challenge-grid > div,
+.tpl-word-preview .summary-cards > div,
+.tpl-word-preview .homework-list > div,
+.tpl-word-preview .test-list > div,
+.tpl-word-preview .mission-list > span,
+.tpl-word-preview .build-checks > span {
+  border: 4px solid var(--line-strong);
+  border-radius: 26px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+.tpl-word-preview .step-cards > div,
+.tpl-word-preview .vote-grid > div,
+.tpl-word-preview .homework-list > div {
+  min-height: 230px;
+  padding: 28px;
+}
+
+.tpl-word-preview .problem-grid > div,
+.tpl-word-preview .upgrade-map > div,
+.tpl-word-preview .build-checks > span,
+.tpl-word-preview .test-list > div {
+  min-height: 94px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  text-align: center;
   font-size: 24px;
-  line-height: 1.35;
+  line-height: 1.2;
   font-weight: 900;
 }
 
-.tpl-ai-kids .problem-grid div:nth-child(odd) { background: #fff0a8; }
-.tpl-ai-kids .problem-grid div:nth-child(even) { background: #c9f4ff; }
+.tpl-word-preview .step-cards b,
+.tpl-word-preview .skill-card span,
+.tpl-word-preview .demo-flow b,
+.tpl-word-preview .vote-grid b,
+.tpl-word-preview .challenge-grid b,
+.tpl-word-preview .summary-cards b {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 4px solid var(--line-strong);
+  border-radius: 50%;
+  background: #fff0a8;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 900;
+}
 
-.tpl-ai-kids .center-panel {
+.tpl-word-preview h3 {
+  margin: 14px 0 10px;
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1.16;
+  font-weight: 900;
+}
+
+.tpl-word-preview p,
+.tpl-word-preview small {
+  color: var(--muted);
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.tpl-word-preview small {
+  display: inline-block;
+  color: var(--brand);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.tpl-word-preview .teacher-prompt,
+.tpl-word-preview .big-quote {
   position: relative;
   z-index: 2;
+  margin-top: 26px;
+  padding: 18px 24px;
+  border: 4px solid var(--line-strong);
+  border-radius: 24px;
+  background: #fff0a8;
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 1.35;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.tpl-word-preview .quote-box {
+  margin-top: 28px;
+  padding: 24px 28px;
+  border: 5px solid var(--line-strong);
+  border-radius: 28px;
+  background: #fff0a8;
+  color: var(--ink);
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 900;
+  box-shadow: var(--shadow);
+}
+
+.tpl-word-preview .mistake-board {
+  min-height: 450px;
+  padding: 34px;
+  background: linear-gradient(#fffdf5 0 72%, #eaffdc 72% 100%);
+}
+
+.tpl-word-preview .wrong-line {
   display: grid;
-  height: 100%;
-  place-items: center;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 4px solid var(--line-strong);
+  border-radius: 22px;
+  background: #fff;
+}
+
+.tpl-word-preview .wrong-line span,
+.tpl-word-preview .wrong-line em {
+  color: var(--ink);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
   text-align: center;
 }
 
-.tpl-ai-kids .mission-card {
-  width: min(860px, 100%);
-  padding: 38px;
+.tpl-word-preview .wrong-line span {
+  color: var(--brand);
+  text-decoration: line-through;
 }
 
-.tpl-ai-kids .mission-label {
-  display: inline-block;
-  margin: 0 0 18px;
-  padding: 10px 18px;
-  border: 4px solid #52361d;
-  border-radius: 999px;
-  background: #c9f4ff;
-  color: var(--text-1);
-  font-size: 22px;
+.tpl-word-preview .wrong-line b {
+  color: var(--brand);
+  font-size: 30px;
+  font-weight: 900;
 }
 
-.tpl-ai-kids .mission-card h3 {
+.tpl-word-preview .kid-face {
+  position: absolute;
+  right: 48px;
+  bottom: 38px;
+  width: 150px;
+  height: 150px;
+  border: 5px solid var(--line-strong);
+  border-radius: 50%;
+  background: #ffd7a8;
+}
+
+.tpl-word-preview .kid-face::before,
+.tpl-word-preview .kid-face::after {
+  content: "";
+  position: absolute;
+  top: 54px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.tpl-word-preview .kid-face::before { left: 42px; }
+.tpl-word-preview .kid-face::after { right: 42px; }
+
+.tpl-word-preview .kid-face {
+  background-image: radial-gradient(ellipse at 50% 72%, transparent 0 18px, var(--line-strong) 19px 23px, transparent 24px);
+}
+
+.tpl-word-preview .method-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tpl-word-preview .insight-card,
+.tpl-word-preview .rule-card,
+.tpl-word-preview .sample-card,
+.tpl-word-preview .agent-card {
+  padding: 34px;
+}
+
+.tpl-word-preview .insight-card h3,
+.tpl-word-preview .mission-card h3 {
   font-size: 44px;
 }
 
-.tpl-ai-kids .mission-list {
+.tpl-word-preview .center-panel {
+  position: relative;
+  z-index: 2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 24px;
+  align-content: center;
+  height: 100%;
 }
 
-.tpl-ai-kids .mission-list span {
-  padding: 20px;
-  border: 4px solid #52361d;
-  border-radius: 24px;
-  background: #eaffdc;
-  font-size: 25px;
-  font-weight: 900;
-}
-
-.tpl-ai-kids .module-map {
-  grid-template-columns: repeat(5, 1fr);
-  align-items: stretch;
-}
-
-.tpl-ai-kids .module-map div {
-  padding: 20px;
-  min-height: 260px;
-}
-
-.tpl-ai-kids .module-map p {
-  font-size: 18px;
-}
-
-.tpl-ai-kids .skill-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.tpl-ai-kids .skill-card {
-  padding: 20px;
-  min-height: 330px;
-}
-
-.tpl-ai-kids .skill-card p {
-  font-size: 18px;
-}
-
-.tpl-ai-kids .skill-card.custom {
-  background: #fff0a8;
-}
-
-.tpl-ai-kids .demo-card {
-  padding: 34px;
-  border: 5px solid #52361d;
-  border-radius: 34px;
-  box-shadow: var(--shadow);
-}
-
-.tpl-ai-kids .demo-card.bad { background: #ffd4c8; }
-.tpl-ai-kids .demo-card.good { background: #eaffdc; }
-
-.tpl-ai-kids .demo-card h3 {
-  font-size: 38px;
-}
-
-.tpl-ai-kids .demo-card p {
-  font-size: 30px;
-  color: var(--text-1);
-  font-weight: 900;
-}
-
-.tpl-ai-kids .demo-arrow {
-  color: #52361d;
-  font-size: 70px;
-  font-weight: 900;
-  text-align: center;
-}
-
-.tpl-ai-kids .demo-layout {
-  grid-template-columns: 1fr 90px 1fr;
-  height: auto;
-}
-
-.tpl-ai-kids .vote-card {
-  min-height: 260px;
-  padding: 34px;
-  text-align: center;
-  background: #fffdf5;
-}
-
-.tpl-ai-kids .vote-card b {
+.tpl-word-preview .mission-card {
+  max-width: 900px;
   margin: 0 auto;
-  width: 72px;
-  height: 72px;
-  background: #ffd45d;
-  font-size: 38px;
-}
-
-.tpl-ai-kids .vote-card h3 {
-  margin-top: 28px;
-  font-size: 36px;
-}
-
-.tpl-ai-kids .rule-card {
-  padding: 30px;
-  background: #fff0a8;
-}
-
-.tpl-ai-kids .rule-card ul {
-  margin: 16px 0 0;
-  padding-left: 26px;
-}
-
-.tpl-ai-kids .build-checks {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.tpl-ai-kids .build-checks span {
-  padding: 18px 22px;
+  padding: 36px;
+  text-align: center;
   background: #fffdf5;
+}
+
+.tpl-word-preview .mission-label {
+  margin: 0;
+  color: var(--brand);
   font-size: 22px;
   font-weight: 900;
 }
 
-.tpl-ai-kids .showcase-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.tpl-ai-kids .showcase-grid div {
-  min-height: 240px;
-  padding: 24px;
-}
-
-.tpl-ai-kids .showcase-grid b {
-  display: block;
-  color: var(--accent-2);
-  font-size: 26px;
-}
-
-.tpl-ai-kids .test-list {
+.tpl-word-preview .mission-list {
   grid-template-columns: repeat(5, 1fr);
+  margin-top: 24px;
 }
 
-.tpl-ai-kids .test-list div {
-  min-height: 190px;
+.tpl-word-preview .mission-list span {
+  min-height: 96px;
   display: grid;
   place-items: center;
-  padding: 22px;
-  background: #eaffdc;
-  font-size: 25px;
-  line-height: 1.28;
-  font-weight: 900;
-  text-align: center;
-}
-
-.tpl-ai-kids .challenge-grid div,
-.tpl-ai-kids .summary-cards div,
-.tpl-ai-kids .homework-list div {
-  padding: 28px;
-}
-
-.tpl-ai-kids .summary-cards {
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 36px;
-}
-
-.tpl-ai-kids .big-quote {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 30px;
-}
-
-.tpl-ai-kids .skills-explain {
-  grid-template-columns: .9fr 1.1fr;
-  height: auto;
-}
-
-.tpl-ai-kids .skill-machine {
-  min-height: 360px;
-  display: grid;
-  place-items: center;
-  background: #c9f4ff;
-}
-
-.tpl-ai-kids .machine-screen {
-  display: grid;
-  width: 180px;
-  height: 130px;
-  place-items: center;
-  border: 6px solid #52361d;
-  border-radius: 34px;
-  background: #fffdf5;
-  color: var(--text-1);
-  font-size: 58px;
-  font-weight: 900;
-}
-
-.tpl-ai-kids .machine-tags {
-  position: absolute;
-  left: 34px;
-  right: 34px;
-  bottom: 34px;
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.tpl-ai-kids .machine-tags span {
-  padding: 10px 14px;
-  border: 3px solid #52361d;
-  border-radius: 999px;
-  background: #fff0a8;
+  padding: 14px;
   font-size: 20px;
   font-weight: 900;
 }
 
-.tpl-ai-kids .plain-card {
-  padding: 34px;
+.tpl-word-preview .compare-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  align-items: center;
+  gap: 20px;
 }
 
-.tpl-ai-kids .plain-card h3 {
-  font-size: 42px;
+.tpl-word-preview .compare-card {
+  min-height: 390px;
+  padding: 30px;
+  border: 5px solid var(--line-strong);
+  border-radius: 32px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
 }
 
-.tpl-ai-kids .plain-card p {
-  font-size: 27px;
-  color: var(--text-1);
+.tpl-word-preview .compare-card.ai {
+  background: #eaffdc;
 }
 
-.tpl-ai-kids .homework-list div {
-  min-height: 260px;
+.tpl-word-preview .compare-card.normal {
+  background: #fff4ec;
+}
+
+.tpl-word-preview .compare-card p {
+  margin: 12px 0;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .72);
+  color: var(--ink);
+}
+
+.tpl-word-preview .compare-arrow {
+  display: grid;
+  width: 78px;
+  height: 78px;
+  place-items: center;
+  border: 4px solid var(--line-strong);
+  border-radius: 50%;
+  background: #fff0a8;
+  color: var(--brand);
+  font-size: 44px;
+  font-weight: 900;
+  box-shadow: var(--shadow);
+}
+
+.tpl-word-preview .skill-card,
+.tpl-word-preview .demo-flow > div,
+.tpl-word-preview .challenge-grid > div,
+.tpl-word-preview .summary-cards > div {
+  min-height: 250px;
+  padding: 22px;
+}
+
+.tpl-word-preview .skill-card:nth-child(1) { background: #fff0a8; }
+.tpl-word-preview .skill-card:nth-child(2) { background: #c9f4ff; }
+.tpl-word-preview .skill-card:nth-child(3) { background: #ffd4c8; }
+.tpl-word-preview .skill-card:nth-child(4) { background: #eaffdc; }
+
+.tpl-word-preview .skill-card p {
+  font-size: 18px;
+}
+
+.tpl-word-preview .demo-flow > div {
   background: #fffdf5;
 }
 
-.tpl-ai-kids .homework-list b {
-  display: block;
-  color: var(--accent-2);
-  font-size: 26px;
+.tpl-word-preview .demo-flow h3 {
+  font-size: 22px;
 }
 
-.tpl-ai-kids .goodbye-slide {
+.tpl-word-preview .demo-flow p {
+  font-size: 17px;
+}
+
+.tpl-word-preview .build-layout {
+  grid-template-columns: .9fr 1.3fr;
+}
+
+.tpl-word-preview .rule-card {
+  background: #fff0a8;
+}
+
+.tpl-word-preview .rule-card h3 {
+  color: var(--brand);
+  font-size: 42px;
+}
+
+.tpl-word-preview .showcase-grid > div {
+  min-height: 150px;
+  padding: 22px;
+}
+
+.tpl-word-preview .showcase-grid b,
+.tpl-word-preview .homework-list b {
+  display: block;
+  color: var(--brand);
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.tpl-word-preview .showcase-grid p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.tpl-word-preview .sample-card {
+  background: #fff0a8;
+}
+
+.tpl-word-preview .sample-card p {
+  margin: 14px 0;
+  padding: 14px 18px;
+  border: 4px solid var(--line-strong);
+  border-radius: 18px;
+  background: #fffdf5;
+  color: var(--ink);
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.tpl-word-preview .upgrade-map > div:nth-child(2n),
+.tpl-word-preview .summary-cards > div:nth-child(2n) {
+  background: #c9f4ff;
+}
+
+.tpl-word-preview .upgrade-map > div:nth-child(3n),
+.tpl-word-preview .summary-cards > div:nth-child(3n) {
+  background: #ffd4c8;
+}
+
+.tpl-word-preview .summary-cards {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.tpl-word-preview .summary-cards > div {
+  min-height: 190px;
+}
+
+.tpl-word-preview .summary-cards p {
+  color: var(--ink);
+  font-size: 19px;
+}
+
+.tpl-word-preview .agent-layout {
+  grid-template-columns: .8fr 1.2fr;
+}
+
+.tpl-word-preview .agent-card.simple {
+  background: #fff4ec;
+}
+
+.tpl-word-preview .agent-card.smart {
+  background: #eaffdc;
+}
+
+.tpl-word-preview .agent-card h3 {
+  font-size: 42px;
+}
+
+.tpl-word-preview .mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.tpl-word-preview .mini-tags span {
+  font-size: 17px;
+  box-shadow: none;
+}
+
+.tpl-word-preview .homework-list > div {
+  background: #fffdf5;
+}
+
+.tpl-word-preview .homework-list p {
+  font-size: 19px;
+}
+
+.tpl-word-preview .goodbye-slide {
   display: grid;
   place-items: center;
 }
 
-.tpl-ai-kids .summary-slide,
-.tpl-ai-kids .expand-slide,
-.tpl-ai-kids .homework-slide {
-  justify-content: flex-start;
-}
-
-.tpl-ai-kids .summary-slide .slide-title,
-.tpl-ai-kids .expand-slide .slide-title,
-.tpl-ai-kids .homework-slide .slide-title {
-  margin-top: 24px;
-  margin-bottom: 30px;
-}
-
-.tpl-ai-kids .goodbye-card {
+.tpl-word-preview .goodbye-card {
   display: grid;
-  width: 760px;
+  width: 780px;
   max-width: 86vw;
-  min-height: 300px;
+  min-height: 440px;
   place-items: center;
   align-content: center;
-  gap: 24px;
+  gap: 18px;
+  padding: 38px;
   background: #fff0a8;
+  text-align: center;
   overflow: visible;
 }
 
-.tpl-ai-kids .goodbye-card h2 {
+.tpl-word-preview .goodbye-logo {
+  height: 124px;
+  padding: 8px 22px;
+  border: 4px solid rgba(232, 36, 49, .20);
+  border-radius: 24px;
+  background: #fff;
+}
+
+.tpl-word-preview .goodbye-card h2 {
   margin: 0;
-  color: var(--text-1);
-  font-size: 64px;
+  color: var(--ink);
+  font-size: 72px;
+  line-height: 1;
   font-weight: 900;
-  white-space: nowrap;
-  text-shadow: 0 7px 0 rgba(255, 129, 95, .25);
+  text-shadow: 0 7px 0 rgba(255, 138, 61, .25);
 }
 
-.tpl-ai-kids .goodbye-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  padding: 12px 22px 12px 12px;
-  border: 4px solid rgba(234, 37, 48, .28);
-  border-radius: 999px;
-  background: rgba(255, 253, 245, .92);
-  box-shadow: 0 8px 0 rgba(82, 54, 29, .08);
+.tpl-word-preview .goodbye-card p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 25px;
 }
 
-.tpl-ai-kids .brand-symbol-end {
-  width: 68px;
-  height: 68px;
-  background-size: 190px auto;
-}
-
-.tpl-ai-kids .brand-copy-end strong {
-  color: #e82431;
-  font-size: 26px;
-}
-
-.tpl-ai-kids .brand-copy-end em {
-  color: #3c3029;
-  font-size: 14px;
-}
-
-.tpl-ai-kids .notes {
+.tpl-word-preview .notes {
   display: none !important;
 }
 
 @media (max-width: 900px) {
-  .tpl-ai-kids .slide { padding: 44px 30px; }
-  .tpl-ai-kids .hero-title { font-size: 46px; }
-  .tpl-ai-kids .slide-title { font-size: 34px; }
-  .tpl-ai-kids .cover-grid,
-  .tpl-ai-kids .story-layout,
-  .tpl-ai-kids .demo-layout,
-  .tpl-ai-kids .build-layout,
-  .tpl-ai-kids .skills-explain,
-  .tpl-ai-kids .three,
-  .tpl-ai-kids .problem-grid,
-  .tpl-ai-kids .module-map,
-  .tpl-ai-kids .skill-grid,
-  .tpl-ai-kids .vote-grid,
-  .tpl-ai-kids .showcase-grid,
-  .tpl-ai-kids .test-list,
-  .tpl-ai-kids .challenge-grid,
-  .tpl-ai-kids .summary-cards,
-  .tpl-ai-kids .homework-list {
+  .tpl-word-preview .slide { padding: 44px 30px; }
+  .tpl-word-preview .slide-title { font-size: 34px; }
+  .tpl-word-preview .cover-copy h1 { font-size: 50px; }
+  .tpl-word-preview .hero-sub,
+  .tpl-word-preview .subtitle { font-size: 20px; }
+  .tpl-word-preview .cover-layout,
+  .tpl-word-preview .story-layout,
+  .tpl-word-preview .method-layout,
+  .tpl-word-preview .build-layout,
+  .tpl-word-preview .test-layout,
+  .tpl-word-preview .agent-layout,
+  .tpl-word-preview .compare-grid,
+  .tpl-word-preview .three,
+  .tpl-word-preview .problem-grid,
+  .tpl-word-preview .skill-grid,
+  .tpl-word-preview .demo-flow,
+  .tpl-word-preview .vote-grid,
+  .tpl-word-preview .showcase-grid,
+  .tpl-word-preview .upgrade-map,
+  .tpl-word-preview .challenge-grid,
+  .tpl-word-preview .summary-cards,
+  .tpl-word-preview .homework-list,
+  .tpl-word-preview .mission-list,
+  .tpl-word-preview .build-checks {
     grid-template-columns: 1fr;
   }
 }
