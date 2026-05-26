@@ -73,6 +73,11 @@
   pointer-events: none;
 }
 
+.tpl-ai-kids:has(.cover-slide.is-active) .brand-mark,
+.tpl-ai-kids:has(.goodbye-slide.is-active) .brand-mark {
+  opacity: 0;
+}
+
 .tpl-ai-kids .brand-symbol {
   width: 42px;
   height: 42px;
@@ -106,6 +111,52 @@
   font-style: normal;
   font-weight: 900;
   letter-spacing: .20em;
+}
+
+.tpl-ai-kids .cover-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  padding: 10px 18px 10px 10px;
+  border: 4px solid rgba(234, 37, 48, .24);
+  border-radius: 999px;
+  background: rgba(255, 253, 245, .92);
+  box-shadow: 0 8px 0 rgba(82, 54, 29, .08), 0 18px 34px rgba(234, 37, 48, .08);
+}
+
+.tpl-ai-kids .brand-symbol-cover {
+  width: 58px;
+  height: 58px;
+  background-size: 162px auto;
+}
+
+.tpl-ai-kids .brand-copy-cover strong {
+  font-size: 22px;
+}
+
+.tpl-ai-kids .brand-copy-cover em {
+  font-size: 13px;
+}
+
+.tpl-ai-kids .task-slide .slide-title::after,
+.tpl-ai-kids .slide[data-title="技能介绍"] .slide-title::after,
+.tpl-ai-kids .homework-slide .slide-title::after,
+.tpl-ai-kids .summary-slide .slide-title::after {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-left: 12px;
+  border: 2px solid rgba(234, 37, 48, .26);
+  border-radius: 50%;
+  background-color: #fffdf5;
+  background-image: url("assets/brand/hissen-music-logo.jpg");
+  background-repeat: no-repeat;
+  background-size: 96px auto;
+  background-position: 50% 31%;
+  box-shadow: 0 4px 0 rgba(82, 54, 29, .08);
+  vertical-align: .08em;
 }
 
 .tpl-ai-kids .page-chip,
@@ -762,6 +813,8 @@
   max-width: 86vw;
   min-height: 300px;
   place-items: center;
+  align-content: center;
+  gap: 24px;
   background: #fff0a8;
   overflow: visible;
 }
@@ -773,6 +826,33 @@
   font-weight: 900;
   white-space: nowrap;
   text-shadow: 0 7px 0 rgba(255, 129, 95, .25);
+}
+
+.tpl-ai-kids .goodbye-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 22px 12px 12px;
+  border: 4px solid rgba(234, 37, 48, .28);
+  border-radius: 999px;
+  background: rgba(255, 253, 245, .92);
+  box-shadow: 0 8px 0 rgba(82, 54, 29, .08);
+}
+
+.tpl-ai-kids .brand-symbol-end {
+  width: 68px;
+  height: 68px;
+  background-size: 190px auto;
+}
+
+.tpl-ai-kids .brand-copy-end strong {
+  color: #e82431;
+  font-size: 26px;
+}
+
+.tpl-ai-kids .brand-copy-end em {
+  color: #3c3029;
+  font-size: 14px;
 }
 
 .tpl-ai-kids .notes {
