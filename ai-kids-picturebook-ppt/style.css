@@ -367,7 +367,6 @@
 }
 
 .tpl-word-preview .three,
-.tpl-word-preview .vote-grid,
 .tpl-word-preview .homework-list {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -381,6 +380,7 @@
 }
 
 .tpl-word-preview .skill-grid,
+.tpl-word-preview .vote-grid,
 .tpl-word-preview .challenge-grid {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -410,10 +410,14 @@
 }
 
 .tpl-word-preview .step-cards > div,
-.tpl-word-preview .vote-grid > div,
 .tpl-word-preview .homework-list > div {
   min-height: 230px;
   padding: 28px;
+}
+
+.tpl-word-preview .vote-grid > div {
+  min-height: 230px;
+  padding: 24px;
 }
 
 .tpl-word-preview .problem-grid > div,
@@ -677,6 +681,23 @@
 .tpl-word-preview .summary-cards > div {
   min-height: 250px;
   padding: 22px;
+}
+
+.tpl-word-preview .challenge-grid > div {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
+  gap: 10px;
+}
+
+.tpl-word-preview .challenge-grid h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.tpl-word-preview .challenge-grid p {
+  margin: 0;
+  font-size: 18px;
 }
 
 .tpl-word-preview .skill-card:nth-child(1) { background: #fff0a8; }
