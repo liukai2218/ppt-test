@@ -1,0 +1,749 @@
+.tpl-ai-kids {
+  --bg: #fff5dc;
+  --surface: #fffdf5;
+  --surface-2: #eaffdc;
+  --border: rgba(82, 54, 29, .22);
+  --border-strong: rgba(82, 54, 29, .46);
+  --text-1: #382315;
+  --text-2: #70543b;
+  --text-3: #9d7e61;
+  --accent: #32b889;
+  --accent-2: #ff815f;
+  --accent-3: #6d8eff;
+  --warn: #ffd45d;
+  --shadow: 0 12px 0 rgba(82, 54, 29, .10), 0 20px 36px rgba(82, 54, 29, .08);
+  --font-display: 'Noto Sans SC', 'Inter', sans-serif;
+  letter-spacing: 0;
+}
+
+.tpl-ai-kids .deck {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(255, 212, 93, .42), transparent 24%),
+    radial-gradient(circle at 84% 22%, rgba(109, 142, 255, .20), transparent 24%),
+    radial-gradient(circle at 78% 84%, rgba(255, 129, 95, .22), transparent 28%),
+    #fff5dc;
+}
+
+.tpl-ai-kids .slide {
+  padding: 58px 70px;
+  background:
+    linear-gradient(0deg, rgba(255, 255, 255, .30), rgba(255, 255, 255, .30)),
+    repeating-radial-gradient(circle at 0 0, rgba(82, 54, 29, .045) 0 3px, transparent 4px 42px),
+    var(--bg);
+}
+
+.tpl-ai-kids .slide::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 4px dashed rgba(82, 54, 29, .16);
+  border-radius: 34px;
+  pointer-events: none;
+}
+
+.tpl-ai-kids .slide::after {
+  content: "★ ● ▲ ★";
+  position: absolute;
+  right: 42px;
+  bottom: 28px;
+  color: rgba(255, 129, 95, .50);
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 12px;
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+
+.tpl-ai-kids .page-chip,
+.tpl-ai-kids .lesson-badge {
+  position: absolute;
+  top: 30px;
+  left: 44px;
+  z-index: 3;
+  padding: 8px 16px;
+  border: 3px solid var(--border-strong);
+  border-radius: 999px;
+  background: #fffdf5;
+  color: var(--text-2);
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 6px 0 rgba(82, 54, 29, .10);
+  transform: rotate(-2deg);
+}
+
+.tpl-ai-kids .kicker {
+  margin: 0;
+  color: var(--accent-2);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .hero-title {
+  margin: 10px 0 18px;
+  color: var(--text-1);
+  font-size: 86px;
+  line-height: 1.02;
+  font-weight: 900;
+  text-shadow: 0 7px 0 rgba(255, 212, 93, .38);
+}
+
+.tpl-ai-kids .hero-sub,
+.tpl-ai-kids .subtitle {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 26px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.tpl-ai-kids .slide-title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 22px;
+  max-width: 1040px;
+  color: var(--text-1);
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-shadow: 0 5px 0 rgba(255, 212, 93, .28);
+}
+
+.tpl-ai-kids .top-center {
+  max-width: none;
+  text-align: center;
+}
+
+.tpl-ai-kids .cover-grid,
+.tpl-ai-kids .story-layout,
+.tpl-ai-kids .demo-layout,
+.tpl-ai-kids .build-layout,
+.tpl-ai-kids .skills-explain {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 38px;
+  width: 100%;
+  height: 100%;
+}
+
+.tpl-ai-kids .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.tpl-ai-kids .tag-row span {
+  padding: 12px 18px;
+  border: 4px solid var(--border-strong);
+  border-radius: 999px;
+  background: #fff0a8;
+  color: var(--text-1);
+  font-size: 22px;
+  font-weight: 900;
+  box-shadow: 0 7px 0 rgba(82, 54, 29, .10);
+}
+
+.tpl-ai-kids .tag-row span:nth-child(2) { background: #c9f4ff; transform: rotate(3deg); }
+.tpl-ai-kids .tag-row span:nth-child(3) { background: #ffd4c8; transform: rotate(-2deg); }
+
+.tpl-ai-kids .decoder-hero,
+.tpl-ai-kids .story-board,
+.tpl-ai-kids .mission-card,
+.tpl-ai-kids .plain-card,
+.tpl-ai-kids .skill-machine,
+.tpl-ai-kids .goodbye-card {
+  position: relative;
+  border: 5px solid var(--border-strong);
+  border-radius: 38px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.tpl-ai-kids .decoder-hero {
+  min-height: 440px;
+  background: linear-gradient(#c9f4ff 0 56%, #eaffdc 56% 100%);
+}
+
+.tpl-ai-kids .paper-card {
+  position: absolute;
+  width: 220px;
+  height: 260px;
+  border: 5px solid #52361d;
+  border-radius: 24px;
+  background: #fffdf5;
+}
+
+.tpl-ai-kids .paper-a { left: 70px; top: 70px; transform: rotate(-8deg); }
+.tpl-ai-kids .paper-b { right: 70px; top: 96px; transform: rotate(7deg); }
+
+.tpl-ai-kids .paper-card::before,
+.tpl-ai-kids .paper-card::after {
+  content: "";
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  height: 12px;
+  border-radius: 999px;
+  background: #ffd45d;
+}
+
+.tpl-ai-kids .paper-card::before { top: 54px; }
+.tpl-ai-kids .paper-card::after { top: 94px; background: #8ee1c8; }
+
+.tpl-ai-kids .lens-big {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 170px;
+  height: 170px;
+  border: 14px solid #52361d;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .42);
+  transform: translate(-50%, -50%);
+}
+
+.tpl-ai-kids .lens-big::after {
+  content: "";
+  position: absolute;
+  right: -76px;
+  bottom: -30px;
+  width: 106px;
+  height: 24px;
+  border: 6px solid #52361d;
+  border-radius: 999px;
+  background: #ff815f;
+  transform: rotate(42deg);
+}
+
+.tpl-ai-kids .decoder-panel {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  bottom: 34px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.tpl-ai-kids .decoder-panel span {
+  padding: 10px 16px;
+  border: 3px solid #52361d;
+  border-radius: 999px;
+  background: #fff0a8;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .step-cards,
+.tpl-ai-kids .problem-grid,
+.tpl-ai-kids .module-map,
+.tpl-ai-kids .skill-grid,
+.tpl-ai-kids .vote-grid,
+.tpl-ai-kids .showcase-grid,
+.tpl-ai-kids .test-list,
+.tpl-ai-kids .challenge-grid,
+.tpl-ai-kids .summary-cards,
+.tpl-ai-kids .homework-list {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 20px;
+}
+
+.tpl-ai-kids .three,
+.tpl-ai-kids .vote-grid,
+.tpl-ai-kids .challenge-grid,
+.tpl-ai-kids .homework-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tpl-ai-kids .step-card,
+.tpl-ai-kids .problem-grid div,
+.tpl-ai-kids .module-map div,
+.tpl-ai-kids .skill-card,
+.tpl-ai-kids .vote-card,
+.tpl-ai-kids .rule-card,
+.tpl-ai-kids .build-checks span,
+.tpl-ai-kids .showcase-grid div,
+.tpl-ai-kids .test-list div,
+.tpl-ai-kids .challenge-grid div,
+.tpl-ai-kids .summary-cards div,
+.tpl-ai-kids .homework-list div {
+  border: 4px solid var(--border-strong);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text-1);
+}
+
+.tpl-ai-kids .step-card {
+  min-height: 260px;
+  padding: 28px;
+}
+
+.tpl-ai-kids .step-card b,
+.tpl-ai-kids .module-map b,
+.tpl-ai-kids .skill-card span,
+.tpl-ai-kids .vote-card b,
+.tpl-ai-kids .summary-cards b {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 4px solid #52361d;
+  border-radius: 50%;
+  background: #fffdf5;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.tpl-ai-kids h3 {
+  margin: 14px 0 8px;
+  color: var(--text-1);
+  font-size: 28px;
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.tpl-ai-kids p,
+.tpl-ai-kids li,
+.tpl-ai-kids small {
+  color: var(--text-2);
+  font-size: 21px;
+  line-height: 1.42;
+  font-weight: 750;
+}
+
+.tpl-ai-kids .yellow { background: #fff0a8; }
+.tpl-ai-kids .blue { background: #c9f4ff; }
+.tpl-ai-kids .pink { background: #ffd4c8; }
+
+.tpl-ai-kids .story-board {
+  min-height: 420px;
+  background: #fffdf5;
+}
+
+.tpl-ai-kids .student-face {
+  position: absolute;
+  left: 52px;
+  top: 70px;
+  width: 132px;
+  height: 132px;
+  border: 6px solid #52361d;
+  border-radius: 50%;
+  background: #ffd9bb;
+}
+
+.tpl-ai-kids .student-face::before,
+.tpl-ai-kids .student-face::after {
+  content: "";
+  position: absolute;
+  top: 52px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #382315;
+}
+
+.tpl-ai-kids .student-face::before { left: 38px; }
+.tpl-ai-kids .student-face::after { right: 38px; }
+
+.tpl-ai-kids .long-paper {
+  position: absolute;
+  right: 58px;
+  top: 58px;
+  width: 270px;
+  height: 310px;
+  padding: 46px 32px;
+  border: 5px solid #52361d;
+  border-radius: 28px;
+  background: #fffaf0;
+  transform: rotate(4deg);
+}
+
+.tpl-ai-kids .long-paper span {
+  display: block;
+  height: 13px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  background: #c9f4ff;
+}
+
+.tpl-ai-kids .long-paper span:nth-child(2n) { background: #ffd4c8; }
+
+.tpl-ai-kids .question-mark {
+  position: absolute;
+  left: 146px;
+  bottom: 56px;
+  color: #ff815f;
+  font-size: 138px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .quote-box,
+.tpl-ai-kids .teacher-prompt,
+.tpl-ai-kids .big-quote {
+  position: relative;
+  z-index: 2;
+  margin-top: 28px;
+  padding: 20px 26px;
+  border: 4px solid rgba(255, 129, 95, .55);
+  border-radius: 26px;
+  background: #fff0c7;
+  color: var(--text-1);
+  font-size: 25px;
+  line-height: 1.36;
+  font-weight: 900;
+  box-shadow: 0 8px 0 rgba(82, 54, 29, .08);
+}
+
+.tpl-ai-kids .problem-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.tpl-ai-kids .problem-grid div {
+  min-height: 210px;
+  padding: 24px;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .problem-grid div:nth-child(odd) { background: #fff0a8; }
+.tpl-ai-kids .problem-grid div:nth-child(even) { background: #c9f4ff; }
+
+.tpl-ai-kids .center-panel {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+}
+
+.tpl-ai-kids .mission-card {
+  width: min(860px, 100%);
+  padding: 38px;
+}
+
+.tpl-ai-kids .mission-label {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 10px 18px;
+  border: 4px solid #52361d;
+  border-radius: 999px;
+  background: #c9f4ff;
+  color: var(--text-1);
+  font-size: 22px;
+}
+
+.tpl-ai-kids .mission-card h3 {
+  font-size: 44px;
+}
+
+.tpl-ai-kids .mission-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.tpl-ai-kids .mission-list span {
+  padding: 20px;
+  border: 4px solid #52361d;
+  border-radius: 24px;
+  background: #eaffdc;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .module-map {
+  grid-template-columns: repeat(5, 1fr);
+  align-items: stretch;
+}
+
+.tpl-ai-kids .module-map div {
+  padding: 20px;
+  min-height: 260px;
+}
+
+.tpl-ai-kids .module-map p {
+  font-size: 18px;
+}
+
+.tpl-ai-kids .skill-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tpl-ai-kids .skill-card {
+  padding: 20px;
+  min-height: 330px;
+}
+
+.tpl-ai-kids .skill-card p {
+  font-size: 18px;
+}
+
+.tpl-ai-kids .skill-card.custom {
+  background: #fff0a8;
+}
+
+.tpl-ai-kids .demo-card {
+  padding: 34px;
+  border: 5px solid #52361d;
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+}
+
+.tpl-ai-kids .demo-card.bad { background: #ffd4c8; }
+.tpl-ai-kids .demo-card.good { background: #eaffdc; }
+
+.tpl-ai-kids .demo-card h3 {
+  font-size: 38px;
+}
+
+.tpl-ai-kids .demo-card p {
+  font-size: 30px;
+  color: var(--text-1);
+  font-weight: 900;
+}
+
+.tpl-ai-kids .demo-arrow {
+  color: #52361d;
+  font-size: 70px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.tpl-ai-kids .demo-layout {
+  grid-template-columns: 1fr 90px 1fr;
+  height: auto;
+}
+
+.tpl-ai-kids .vote-card {
+  min-height: 260px;
+  padding: 34px;
+  text-align: center;
+  background: #fffdf5;
+}
+
+.tpl-ai-kids .vote-card b {
+  margin: 0 auto;
+  width: 72px;
+  height: 72px;
+  background: #ffd45d;
+  font-size: 38px;
+}
+
+.tpl-ai-kids .vote-card h3 {
+  margin-top: 28px;
+  font-size: 36px;
+}
+
+.tpl-ai-kids .rule-card {
+  padding: 30px;
+  background: #fff0a8;
+}
+
+.tpl-ai-kids .rule-card ul {
+  margin: 16px 0 0;
+  padding-left: 26px;
+}
+
+.tpl-ai-kids .build-checks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.tpl-ai-kids .build-checks span {
+  padding: 18px 22px;
+  background: #fffdf5;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .showcase-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tpl-ai-kids .showcase-grid div {
+  min-height: 240px;
+  padding: 24px;
+}
+
+.tpl-ai-kids .showcase-grid b {
+  display: block;
+  color: var(--accent-2);
+  font-size: 26px;
+}
+
+.tpl-ai-kids .test-list {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.tpl-ai-kids .test-list div {
+  min-height: 190px;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: #eaffdc;
+  font-size: 25px;
+  line-height: 1.28;
+  font-weight: 900;
+  text-align: center;
+}
+
+.tpl-ai-kids .challenge-grid div,
+.tpl-ai-kids .summary-cards div,
+.tpl-ai-kids .homework-list div {
+  padding: 28px;
+}
+
+.tpl-ai-kids .summary-cards {
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 36px;
+}
+
+.tpl-ai-kids .big-quote {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.tpl-ai-kids .skills-explain {
+  grid-template-columns: .9fr 1.1fr;
+  height: auto;
+}
+
+.tpl-ai-kids .skill-machine {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  background: #c9f4ff;
+}
+
+.tpl-ai-kids .machine-screen {
+  display: grid;
+  width: 180px;
+  height: 130px;
+  place-items: center;
+  border: 6px solid #52361d;
+  border-radius: 34px;
+  background: #fffdf5;
+  color: var(--text-1);
+  font-size: 58px;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .machine-tags {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tpl-ai-kids .machine-tags span {
+  padding: 10px 14px;
+  border: 3px solid #52361d;
+  border-radius: 999px;
+  background: #fff0a8;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.tpl-ai-kids .plain-card {
+  padding: 34px;
+}
+
+.tpl-ai-kids .plain-card h3 {
+  font-size: 42px;
+}
+
+.tpl-ai-kids .plain-card p {
+  font-size: 27px;
+  color: var(--text-1);
+}
+
+.tpl-ai-kids .homework-list div {
+  min-height: 260px;
+  background: #fffdf5;
+}
+
+.tpl-ai-kids .homework-list b {
+  display: block;
+  color: var(--accent-2);
+  font-size: 26px;
+}
+
+.tpl-ai-kids .goodbye-slide {
+  display: grid;
+  place-items: center;
+}
+
+.tpl-ai-kids .summary-slide,
+.tpl-ai-kids .expand-slide,
+.tpl-ai-kids .homework-slide {
+  justify-content: flex-start;
+}
+
+.tpl-ai-kids .summary-slide .slide-title,
+.tpl-ai-kids .expand-slide .slide-title,
+.tpl-ai-kids .homework-slide .slide-title {
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+
+.tpl-ai-kids .goodbye-card {
+  display: grid;
+  width: 760px;
+  max-width: 86vw;
+  min-height: 300px;
+  place-items: center;
+  background: #fff0a8;
+  overflow: visible;
+}
+
+.tpl-ai-kids .goodbye-card h2 {
+  margin: 0;
+  color: var(--text-1);
+  font-size: 64px;
+  font-weight: 900;
+  white-space: nowrap;
+  text-shadow: 0 7px 0 rgba(255, 129, 95, .25);
+}
+
+.tpl-ai-kids .notes {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .tpl-ai-kids .slide { padding: 44px 30px; }
+  .tpl-ai-kids .hero-title { font-size: 46px; }
+  .tpl-ai-kids .slide-title { font-size: 34px; }
+  .tpl-ai-kids .cover-grid,
+  .tpl-ai-kids .story-layout,
+  .tpl-ai-kids .demo-layout,
+  .tpl-ai-kids .build-layout,
+  .tpl-ai-kids .skills-explain,
+  .tpl-ai-kids .three,
+  .tpl-ai-kids .problem-grid,
+  .tpl-ai-kids .module-map,
+  .tpl-ai-kids .skill-grid,
+  .tpl-ai-kids .vote-grid,
+  .tpl-ai-kids .showcase-grid,
+  .tpl-ai-kids .test-list,
+  .tpl-ai-kids .challenge-grid,
+  .tpl-ai-kids .summary-cards,
+  .tpl-ai-kids .homework-list {
+    grid-template-columns: 1fr;
+  }
+}

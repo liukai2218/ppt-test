@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第2课：题型解码器</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" id="theme-link" href="assets/themes/soft-pastel.css">
+<link rel="stylesheet" href="assets/animations/animations.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="tpl-ai-kids lesson-deck" data-themes="soft-pastel,xiaohongshu-white,rainbow-gradient,minimal-white" data-theme-base="assets/themes/">
+<div class="deck">
+
+  <section class="slide cover-slide" data-title="封面">
+    <div class="lesson-badge">AI 创造课 · Lesson 02</div>
+    <div class="cover-grid">
+      <div>
+        <p class="kicker">阅读理解任务</p>
+        <h1 class="hero-title">第2课：<br>题型解码器</h1>
+        <p class="hero-sub">把阅读题拆开看，找到答案藏在哪里。</p>
+        <div class="tag-row">
+          <span>找位置</span>
+          <span>圈关键词</span>
+          <span>造技能</span>
+        </div>
+      </div>
+      <div class="decoder-hero" aria-label="题型解码器插画">
+        <div class="paper-card paper-a"></div>
+        <div class="paper-card paper-b"></div>
+        <div class="lens-big"></div>
+        <div class="decoder-panel">
+          <span>中心句</span>
+          <span>关键词</span>
+          <span>答案位置</span>
+        </div>
+      </div>
+    </div>
+    <aside class="notes">开场强调：今天不是只让 AI 帮我们答题，而是创造一个能陪我们练阅读理解的 AI 技能。</aside>
+  </section>
+
+  <section class="slide" data-title="上节课回顾">
+    <div class="page-chip">01 回顾</div>
+    <h2 class="slide-title">上节课回顾</h2>
+    <p class="subtitle">上节课主题：我和我的成长伙伴</p>
+    <div class="step-cards three">
+      <div class="step-card yellow"><b>1</b><h3>选伙伴形象</h3><p>选出你最喜欢的伙伴形象。</p></div>
+      <div class="step-card blue"><b>2</b><h3>起名字</h3><p>给它起一个独一无二的名字。</p></div>
+      <div class="step-card pink"><b>3</b><h3>第一次对话</h3><p>让它认识你，也认识你的学习习惯。</p></div>
+    </div>
+    <aside class="notes">用 1 分钟让孩子说出自己伙伴的名字，快速唤起上节课成果。</aside>
+  </section>
+
+  <section class="slide" data-title="情景引入">
+    <div class="page-chip">02 情景</div>
+    <div class="story-layout">
+      <div>
+        <h2 class="slide-title">阅读题里的答案，<br>到底藏哪了？</h2>
+        <p class="subtitle">小明做语文阅读理解时，总是找不到答案在哪。</p>
+        <div class="quote-box">“老师讲过模板，可我一看到文章就忘了……”</div>
+      </div>
+      <div class="story-board">
+        <div class="student-face"></div>
+        <div class="long-paper">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="question-mark">?</div>
+      </div>
+    </div>
+    <aside class="notes">引导孩子共情：文章很长、题目很多、模板记不住，这是很常见的问题。</aside>
+  </section>
+
+  <section class="slide" data-title="问题引出">
+    <div class="page-chip">03 讨论</div>
+    <h2 class="slide-title">语文阅读理解为什么做不好？</h2>
+    <div class="problem-grid">
+      <div>文章太长，看完就忘了。</div>
+      <div>有些词语和成语不懂。</div>
+      <div>不知道作者真正想表达什么。</div>
+      <div>没掌握阅读题的方法和技巧。</div>
+      <div>答案位置找不到，写起来很慌。</div>
+    </div>
+    <div class="teacher-prompt">老师引导：遇到阅读理解中不会的问题，该怎么办？</div>
+    <aside class="notes">第 5 点把重复的“词语和成语不懂”换成“答案位置找不到”，避免页面重复，同时更贴近后续任务。</aside>
+  </section>
+
+  <section class="slide task-slide" data-title="今日任务">
+    <div class="page-chip">04 任务</div>
+    <div class="center-panel">
+      <h2 class="slide-title top-center">今日任务</h2>
+      <div class="mission-card">
+        <p class="mission-label">创建 AI 阅读理解技能</p>
+        <h3>让 AI 帮你做两件事</h3>
+        <div class="mission-list">
+          <span>总结文章的中心思想</span>
+          <span>找到问题答案在原文中的位置</span>
+        </div>
+      </div>
+    </div>
+    <aside class="notes">明确产出：今天每个孩子要完成一个“阅读理解技能”雏形，而不是只体验一个工具。</aside>
+  </section>
+
+  <section class="slide" data-title="问题拆解">
+    <div class="page-chip">05 拆解</div>
+    <h2 class="slide-title">AI 如何帮助你提高阅读理解的解题能力？</h2>
+    <div class="module-map">
+      <div><b>1</b><h3>读懂文字</h3><p>词语理解、句子理解、上下文理解</p></div>
+      <div><b>2</b><h3>提取重点</h3><p>时间、地点、人物、中心句、关键词</p></div>
+      <div><b>3</b><h3>分析文章</h3><p>人物情感、品质、写作目的、修辞理解</p></div>
+      <div><b>4</b><h3>概括表达</h3><p>总结中心思想，说清楚主要内容</p></div>
+      <div><b>5</b><h3>阅读迁移</h3><p>遇到类似文章，也能用同样方法分析</p></div>
+    </div>
+    <aside class="notes">这页是课程方法论：把“大问题”拆成五个小模块。</aside>
+  </section>
+
+  <section class="slide" data-title="技能介绍">
+    <div class="page-chip">06 技能库</div>
+    <h2 class="slide-title">技能介绍</h2>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <span>A</span>
+        <h3>现代文阅读陪练</h3>
+        <p>标注段落大意和中心句；出 3 道阅读题并讲对错；拍卷子题目后定位原文答案。</p>
+      </div>
+      <div class="skill-card">
+        <span>B</span>
+        <h3>古文阅读陪练</h3>
+        <p>帮助理解文言词句，提升古文阅读理解能力。</p>
+      </div>
+      <div class="skill-card">
+        <span>C</span>
+        <h3>答题套路训练</h3>
+        <p>生成主观题答题公式，帮助大家套公式去答题。</p>
+      </div>
+      <div class="skill-card custom">
+        <span>D</span>
+        <h3>自创技能</h3>
+        <p>按照自己的想法创造，给技能增加规则和流程。</p>
+      </div>
+    </div>
+    <aside class="notes">虽然投票只选 B/C/D，但这里完整介绍四类技能，便于孩子理解技能可以被组合和改造。</aside>
+  </section>
+
+  <section class="slide" data-title="老师演示环节">
+    <div class="page-chip">07 演示</div>
+    <h2 class="slide-title">演示技能</h2>
+    <div class="demo-layout">
+      <div class="demo-card bad">
+        <h3>错误示范</h3>
+        <p>只输入一篇英语文章。</p>
+        <small>结果：AI 可能直接分析英语文章，偏离今天的语文阅读任务。</small>
+      </div>
+      <div class="demo-arrow">→</div>
+      <div class="demo-card good">
+        <h3>优化规则</h3>
+        <p>输入的文章必须是中文。</p>
+        <small>再增加任务、规则和流程，AI 效果会更明显。</small>
+      </div>
+    </div>
+    <div class="teacher-prompt">老师现场演示：设置任务 → 增加规则 → 优化流程。</div>
+    <aside class="notes">重点不是演示“AI 很聪明”，而是演示规则如何影响 AI 的输出。</aside>
+  </section>
+
+  <section class="slide vote-slide" data-title="投票选技能">
+    <div class="page-chip">08 投票</div>
+    <h2 class="slide-title">投票选技能</h2>
+    <p class="subtitle">从下面 3 个技能中，选一个你最想创造的。</p>
+    <div class="vote-grid">
+      <div class="vote-card"><b>A</b><h3>古文阅读陪练</h3></div>
+      <div class="vote-card"><b>B</b><h3>答题套路训练</h3></div>
+      <div class="vote-card"><b>C</b><h3>自创技能</h3></div>
+    </div>
+    <aside class="notes">让孩子用举手、贴纸或纸条投票。投票不是为了定唯一答案，而是让孩子做选择。</aside>
+  </section>
+
+  <section class="slide" data-title="技能创造">
+    <div class="page-chip">09 实操</div>
+    <h2 class="slide-title">搭建自己阅读理解技能</h2>
+    <div class="build-layout">
+      <div class="rule-card">
+        <h3>先设置 AI 规则</h3>
+        <ul>
+          <li>只分析中文文章</li>
+          <li>文章字数适合我的年龄</li>
+          <li>先定位原文，再回答问题</li>
+        </ul>
+      </div>
+      <div class="build-checks">
+        <span>找正确答案位置</span>
+        <span>圈关键字</span>
+        <span>分析句子</span>
+        <span>分析人物</span>
+        <span>归纳中心</span>
+        <span>分析错误选项原因</span>
+      </div>
+    </div>
+    <aside class="notes">孩子开始搭建技能。老师提醒：先写规则，再写功能，不要一上来就让 AI “帮我做题”。</aside>
+  </section>
+
+  <section class="slide" data-title="成果验证">
+    <div class="page-chip">10 分享</div>
+    <h2 class="slide-title">分享展示技能</h2>
+    <div class="showcase-grid">
+      <div><b>名称</b><p>你的智能体叫什么？</p></div>
+      <div><b>核心功能</b><p>它最会帮你做什么？</p></div>
+      <div><b>最满意的地方</b><p>哪一步做得最好？</p></div>
+      <div><b>存在的问题</b><p>哪里还不稳定？怎么优化？</p></div>
+    </div>
+    <div class="teacher-prompt">老师重点：鼓励孩子主动发现 AI 的问题，而不是只夸 AI。</div>
+    <aside class="notes">展示时必须说一个优点和一个待优化点，培养孩子的评估意识。</aside>
+  </section>
+
+  <section class="slide" data-title="优化升级">
+    <div class="page-chip">11 测试</div>
+    <h2 class="slide-title">你的技能可靠吗？</h2>
+    <p class="subtitle">真正厉害的技能，是不断测试出来的。</p>
+    <div class="test-list">
+      <div>题型的识别能力</div>
+      <div>原文定位能力</div>
+      <div>关键字提取能力</div>
+      <div>步骤链测试</div>
+      <div>错误纠正测试</div>
+    </div>
+    <aside class="notes">统一测试内容，让孩子看到技能并不是“创建完就结束”，而是要通过测试来升级。</aside>
+  </section>
+
+  <section class="slide" data-title="挑战任务">
+    <div class="page-chip">12 挑战</div>
+    <h2 class="slide-title">挑战任务</h2>
+    <p class="subtitle">根据测试结果，继续升级你的阅读理解技能。</p>
+    <div class="challenge-grid">
+      <div><h3>答题技巧类</h3><p>加入不同题型的答题方法。</p></div>
+      <div><h3>错题纠错</h3><p>让 AI 帮你分析为什么错。</p></div>
+      <div><h3>阅读思维引导</h3><p>让 AI 用问题一步步引导你。</p></div>
+    </div>
+    <div class="teacher-prompt">老师引导：AI 升级最重要的是不断迭代。</div>
+    <aside class="notes">这里可以作为课堂加分任务，也可以作为课后继续完善的方向。</aside>
+  </section>
+
+  <section class="slide summary-slide" data-title="复盘总结">
+    <div class="page-chip">13 总结</div>
+    <h2 class="slide-title top-center">今天你完成了什么？</h2>
+    <div class="summary-cards">
+      <div><b>1</b><p>学会创建新技能，解决阅读理解相关难点。</p></div>
+      <div><b>2</b><p>学会修复、优化、升级自己创造的技能。</p></div>
+    </div>
+    <div class="big-quote">未来最厉害的人，不是一直问 AI 的人，而是会创造 AI 技能的人。</div>
+    <aside class="notes">用这句话收束全课，突出“创造技能”的价值。</aside>
+  </section>
+
+  <section class="slide expand-slide" data-title="知识拓展">
+    <div class="page-chip">14 拓展</div>
+    <h2 class="slide-title top-center">什么是 Skills（技能）</h2>
+    <div class="skills-explain">
+      <div class="skill-machine">
+        <div class="machine-screen">AI</div>
+        <div class="machine-tags">
+          <span>规则</span><span>步骤</span><span>例子</span>
+        </div>
+      </div>
+      <div class="plain-card">
+        <h3>简单说：</h3>
+        <p>Skills 就像给 AI 装上一个“专门做某件事的小工具”。</p>
+        <p>生活例子：你想做蛋糕，要先有菜谱；你想让 AI 做阅读理解，也要给它“阅读菜谱”。</p>
+      </div>
+    </div>
+    <aside class="notes">给 8-13 岁孩子解释时，不讲技术定义，讲“规则 + 步骤 + 例子 = 一个技能”。</aside>
+  </section>
+
+  <section class="slide homework-slide" data-title="课后任务">
+    <div class="page-chip">15 作业</div>
+    <h2 class="slide-title top-center">课后任务</h2>
+    <div class="homework-list">
+      <div><b>任务一【进阶】</b><p>让伙伴再陪你做 1 篇新短文，记录易错题型。</p></div>
+      <div><b>任务二【跟家人】</b><p>跟爸妈分享你的答题思路，让爸妈判断对不对。</p></div>
+      <div><b>任务三【下节预热】</b><p>下节学古文，带 1 句你最看不懂的古诗。</p></div>
+    </div>
+    <aside class="notes">课后任务分层：进阶、家庭分享、下节预热。</aside>
+  </section>
+
+  <section class="slide goodbye-slide" data-title="课程结束">
+    <div class="goodbye-card">
+      <h2>下节课再见</h2>
+    </div>
+    <aside class="notes">结束页保持简单，方便老师停留和收尾。</aside>
+  </section>
+
+</div>
+<script src="assets/runtime.js"></script>
+</body>
+</html>
